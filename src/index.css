@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.scrollbar-track {
+  @apply !bg-transparent !z-20;
+}
+
+.scrollbar-thumb {
+  @apply !bg-primary;
+}
+
+.chat a {
+  @apply underline hover:no-underline;
+}
+
+.chat .scrollbar-thumb {
+  @apply !bg-secondary;
+}
+
+.triangle {
+  @apply relative;
+}
+
+.triangle:before {
+  @apply content-[""] absolute top-0 -left-2 w-0 h-0 border-l-[15px] border-l-transparent border-t-[20px] border-t-current;
+}
+
+.messageReverse {
+  @apply flex-row-reverse;
+}
+
+.messageReverse .triangle:before {
+  @apply left-auto -right-2 border-l-0 border-r-[15px] border-r-transparent;
+}
+
+.react-input-emoji--container {
+  @apply !text-text !bg-secondary !border-transparent;
+}
+
+.react-input-emoji--placeholder {
+  @apply text-gray-500;
+}
+
+.scrollbar-dark {
+  @apply overflow-y-scroll scrollbar scrollbar-thumb-accent scrollbar-track-primary;
+}
+
+.scrollbar-light {
+  @apply overflow-y-scroll scrollbar scrollbar-thumb-gray-500 scrollbar-track-white;
+}
+
+.colorInput fieldset {
+  @apply border-none;
+}
+.colorInput input {
+  @apply text-text;
+}
+.colorInput button {
+  @apply w-10;
+}
+.colorInput .MuiInputBase-formControl {
+  @apply pl-0;
+}
+
+#tooltip {
+  @apply hidden lg:block bg-accent opacity-100 rounded-xl z-30;
+}
